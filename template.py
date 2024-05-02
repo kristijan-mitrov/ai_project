@@ -1,7 +1,18 @@
 # Code from another k-nn assignment
 
-from sklearn.datasets import load_breast_cancer
-X,y = load_breast_cancer(return_X_y=True)
+# Common imports
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Figures plotted inside the notebook
+%matplotlib inline
+# High quality figures
+%config InlineBackend.figure_format = 'retina'
+# For fancy table Display
+%load_ext google.colab.data_table
+
+import warnings
+warnings.filterwarnings("ignore")
 
 # Count the number of samples belonging to malignant tumors (class 0)
 num_malignant_samples = np.count_nonzero(y == 0)
