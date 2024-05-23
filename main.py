@@ -9,3 +9,10 @@ with open('data.csv', 'r') as csv_datei:
     next(csv_reader)
     for zeile in csv_reader:
         groundtruthdata.append(zeile[:2])
+
+#import images
+filename = "images/Image1.jpg"
+with Image.open(filename) as image:
+    width, height = image.size
+
+print(image.size)
